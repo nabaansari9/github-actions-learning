@@ -1,4 +1,4 @@
-name: Test- Exercise 2
+name: Test Exercise 2
 on: push
 jobs:
   lint:

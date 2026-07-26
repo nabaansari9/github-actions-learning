@@ -1,0 +1,24 @@
+name: Test Exercise 1
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+      # Run lint
+      - name: Run Lint
+        run: npm run lint
+      # Run tests
+      - name: Run tests
+        run: npm run test
+      # Run lint
+      - name: Run build
+        run: npm run build
+
